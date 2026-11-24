@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inteligência Operacional Abastece</title>
+  <meta name="description" content="Monitoramento de eventos externos, conectividade e infraestrutura — protótipo V0 com dados simulados.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%2316284A'/%3E%3Ccircle cx='12' cy='12' r='6' fill='none' stroke='%2360A5FA' stroke-width='2'/%3E%3Ccircle cx='12' cy='12' r='2' fill='%23A78BFA'/%3E%3C/svg%3E">
+
+  <!-- Bibliotecas locais (vendor/): funcionam sem CDN. Apenas os tiles do mapa exigem internet. -->
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="vendor/markercluster/MarkerCluster.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div id="root"></div>
+  <noscript>Esta aplicação precisa de JavaScript habilitado.</noscript>
+
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="vendor/markercluster/leaflet.markercluster.js"></script>
+  <script src="vendor/chartjs/chart.umd.js"></script>
+
+  <!-- Núcleo: utilitários e dados de referência -->
+  <script src="js/core/utils.js"></script>
+  <script src="js/data/reference.js"></script>
+  <!-- Dados: simulador (substituível por APIs reais via adapters) -->
+  <script src="js/data/simulator.js"></script>
+  <script src="js/integrations/adapters.js"></script>
+  <!-- Regras de negócio -->
+  <script src="js/engine/correlation.js"></script>
+  <script src="js/core/store.js"></script>
+  <!-- Apresentação -->
+  <script src="js/ui/components.js"></script>
+  <script src="js/ui/details.js"></script>
+  <script src="js/views/executive.js"></script>
+  <script src="js/views/map.js"></script>
+  <script src="js/views/connectivity.js"></script>
+  <script src="js/views/energy.js"></script>
+  <script src="js/views/weather.js"></script>
+  <script src="js/views/correlation.js"></script>
+  <script src="js/views/history.js"></script>
+  <script src="js/views/settings.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
